@@ -1,0 +1,9 @@
+{
+	"name": "supplychain",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e68a15ec-c56e-4859-a3b9-14f2e495dda9",
+		"tenantId": "6610c761-bb30-49c3-a70c-87d0fbd9b0ed"
+	}
+}
