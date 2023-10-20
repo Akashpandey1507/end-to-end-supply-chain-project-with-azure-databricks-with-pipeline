@@ -1,0 +1,235 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "supply-chain-datasets"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Type",
+				"type": "String"
+			},
+			{
+				"name": "Days for shipping (real)",
+				"type": "String"
+			},
+			{
+				"name": "Days for shipment (scheduled)",
+				"type": "String"
+			},
+			{
+				"name": "Benefit per order",
+				"type": "String"
+			},
+			{
+				"name": "Sales per customer",
+				"type": "String"
+			},
+			{
+				"name": "Delivery Status",
+				"type": "String"
+			},
+			{
+				"name": "Late_delivery_risk",
+				"type": "String"
+			},
+			{
+				"name": "Category Id",
+				"type": "String"
+			},
+			{
+				"name": "Category Name",
+				"type": "String"
+			},
+			{
+				"name": "Customer City",
+				"type": "String"
+			},
+			{
+				"name": "Customer Country",
+				"type": "String"
+			},
+			{
+				"name": "Customer Email",
+				"type": "String"
+			},
+			{
+				"name": "Customer Fname",
+				"type": "String"
+			},
+			{
+				"name": "Customer Id",
+				"type": "String"
+			},
+			{
+				"name": "Customer Lname",
+				"type": "String"
+			},
+			{
+				"name": "Customer Password",
+				"type": "String"
+			},
+			{
+				"name": "Customer Segment",
+				"type": "String"
+			},
+			{
+				"name": "Customer State",
+				"type": "String"
+			},
+			{
+				"name": "Customer Street",
+				"type": "String"
+			},
+			{
+				"name": "Customer Zipcode",
+				"type": "String"
+			},
+			{
+				"name": "Department Id",
+				"type": "String"
+			},
+			{
+				"name": "Department Name",
+				"type": "String"
+			},
+			{
+				"name": "Latitude",
+				"type": "String"
+			},
+			{
+				"name": "Longitude",
+				"type": "String"
+			},
+			{
+				"name": "Market",
+				"type": "String"
+			},
+			{
+				"name": "Order City",
+				"type": "String"
+			},
+			{
+				"name": "Order Country",
+				"type": "String"
+			},
+			{
+				"name": "Order Customer Id",
+				"type": "String"
+			},
+			{
+				"name": "order date (DateOrders)",
+				"type": "String"
+			},
+			{
+				"name": "Order Id",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Cardprod Id",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Discount",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Discount Rate",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Id",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Product Price",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Profit Ratio",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Quantity",
+				"type": "String"
+			},
+			{
+				"name": "Sales",
+				"type": "String"
+			},
+			{
+				"name": "Order Item Total",
+				"type": "String"
+			},
+			{
+				"name": "Order Profit Per Order",
+				"type": "String"
+			},
+			{
+				"name": "Order Region",
+				"type": "String"
+			},
+			{
+				"name": "Order State",
+				"type": "String"
+			},
+			{
+				"name": "Order Status",
+				"type": "String"
+			},
+			{
+				"name": "Order Zipcode",
+				"type": "String"
+			},
+			{
+				"name": "Product Card Id",
+				"type": "String"
+			},
+			{
+				"name": "Product Category Id",
+				"type": "String"
+			},
+			{
+				"name": "Product Description",
+				"type": "String"
+			},
+			{
+				"name": "Product Image",
+				"type": "String"
+			},
+			{
+				"name": "Product Name",
+				"type": "String"
+			},
+			{
+				"name": "Product Price",
+				"type": "String"
+			},
+			{
+				"name": "Product Status",
+				"type": "String"
+			},
+			{
+				"name": "shipping date (DateOrders)",
+				"type": "String"
+			},
+			{
+				"name": "Shipping Mode",
+				"type": "String"
+			}
+		]
+	}
+}
