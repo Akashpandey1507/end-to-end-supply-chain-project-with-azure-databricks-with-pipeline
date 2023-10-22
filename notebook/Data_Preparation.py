@@ -120,3 +120,60 @@ df1 = df1.drop("Customer Email", "Customer Password")
 # COMMAND ----------
 
 display(df1)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC
+# MAGIC # Working on Datasets Tocket as df2
+
+# COMMAND ----------
+
+df2.count()
+
+# COMMAND ----------
+
+df2.columns
+
+# COMMAND ----------
+
+len(df2.columns)
+
+# COMMAND ----------
+
+[column_name for column_name , datatype in df2.dtypes if datatype in ['string']]
+
+# COMMAND ----------
+
+display(df2.select([column_name for column_name , datatype in df2.dtypes if datatype in ['string']]))
+
+# COMMAND ----------
+
+display(df2.select([column_name for column_name , datatype in df2.dtypes if datatype in ['int', "double"]]))
+
+# COMMAND ----------
+
+df2.groupBy(col("Date")).count().show(50)
+
+# COMMAND ----------
+
+date_format = "M/d/yyyy H:mm"
+
+# Use to_timestamp to convert the string to datetime
+df2 = df2.withColumn("Date", to_timestamp(df2["Date"], date_format))
+
+# COMMAND ----------
+
+df2.select("Date").show()
+
+# COMMAND ----------
+
+df2.printSchema()
+
+# COMMAND ----------
+
+df1.printSchema()
+
+# COMMAND ----------
+
+df2.display()
