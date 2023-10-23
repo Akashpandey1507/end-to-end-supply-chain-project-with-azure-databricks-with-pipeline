@@ -3,4 +3,68 @@
 
 # COMMAND ----------
 
+display(df1)
 
+# COMMAND ----------
+
+df1.count()
+
+# COMMAND ----------
+
+df1.columns
+
+# COMMAND ----------
+
+len(df1.columns)
+
+# COMMAND ----------
+
+df1.describe().display()
+
+# COMMAND ----------
+
+df1.select("Sales").agg(sum('Sales').alias('Net Sales')).show(truncate=False)
+
+# COMMAND ----------
+
+df1.groupBy(col("Shipping Mode")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Type")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Delivery Status")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Category Name")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Customer City")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Customer Country")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Customer Segment")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Customer State")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Department Name")).count().show()
+
+# COMMAND ----------
+
+df1.groupBy(col("Order Country"),col("Order City")).count().show()
+
+# COMMAND ----------
+
+df1.display()
