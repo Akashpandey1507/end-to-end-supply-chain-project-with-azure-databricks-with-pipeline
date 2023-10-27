@@ -3,10 +3,6 @@
 
 # COMMAND ----------
 
-display(df1)
-
-# COMMAND ----------
-
 df1.count()
 
 # COMMAND ----------
@@ -67,4 +63,16 @@ df1.groupBy(col("Order Country"),col("Order City")).count().show()
 
 # COMMAND ----------
 
+df1.groupBy("Category Name").agg(sum("Sales").alias("Net Sales")).show()
+
+# COMMAND ----------
+
+df1.sort(df1["Customer City"]).select("Customer City").show()
+
+# COMMAND ----------
+
 df1.display()
+
+# COMMAND ----------
+
+
