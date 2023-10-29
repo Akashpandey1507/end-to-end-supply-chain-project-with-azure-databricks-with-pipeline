@@ -75,4 +75,16 @@ df1.display()
 
 # COMMAND ----------
 
+df2.groupBy(col("Department")).count().show()
 
+# COMMAND ----------
+
+df2.groupBy(col("Department")).count().show()
+
+# COMMAND ----------
+
+df2.groupBy(col("Product")).count().show(truncate=False)
+
+# COMMAND ----------
+
+df2.show()
