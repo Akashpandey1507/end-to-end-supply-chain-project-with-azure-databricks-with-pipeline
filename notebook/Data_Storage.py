@@ -3,14 +3,50 @@
 
 # COMMAND ----------
 
-display(dbutils.fs.ls("wasbs://" + blob_container + "@" + storage_account_name + ".blob.core.windows.net/"))
+#create the scope
+sqlServer = dbutils.secrets.get(scope="bigdata Scope", key="sqlServer")
+sqlDatabase = dbutils.secrets.get(scope="bigdata Scope", key="sqlDatabase")
+SQLpassward = dbutils.secrets.get(scope="bigdata Scope", key="SQLpassward")
 
 # COMMAND ----------
 
-# Specify the write mode as "overwrite"
-df2.write.mode("overwrite").csv("wasbs://supply-chain-datasets@project99110.blob.core.windows.net/cleaneddatasets/Tokendatasets/")
+display(df1)
 
 # COMMAND ----------
 
-# Specify the write mode as "overwrite"
-df1.write.mode("overwrite").csv("wasbs://supply-chain-datasets@project99110.blob.core.windows.net/cleaneddatasets/SupplyChainDataset/")
+server = sqlServer
+database = sqlDatabase
+username = 'mailboxakash'
+password = SQLpassward
+#driver= '{ODBC Driver 17 for SQL Server}'
+#connection = pyodbc.connect(f'SERVER={server};DATABASE={database};UID={username};PWD={password};Driver={driver}')
+
+
+# COMMAND ----------
+
+# Assuming 'df1' is your DataFrame
+df1.write \
+  .format("jdbc") \
+  .option("url", f"jdbc:sqlserver://{server};databaseName={database}") \
+  .option("dbtable", "SupplyandChain") \
+  .option("user", username) \
+  .option("password", password) \
+  .mode("overwrite") \
+  .save()
+
+
+# COMMAND ----------
+
+df2.display()
+
+# COMMAND ----------
+
+# Assuming 'df2' is your DataFrame
+df2.write \
+  .format("jdbc") \
+  .option("url", f"jdbc:sqlserver://{server};databaseName={database}") \
+  .option("dbtable", "SupplyandChain2") \
+  .option("user", username) \
+  .option("password", password) \
+  .mode("overwrite") \
+  .save()

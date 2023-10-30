@@ -1,7 +1,7 @@
 # Databricks notebook source
 #create the scope
-secret_value = dbutils.secrets.get(scope="AkashScope", key="adlskey")
-secret_storage_name = dbutils.secrets.get(scope="AkashScope", key="storagename")
+secret_value = dbutils.secrets.get(scope="bigdata Scope", key="adlskey")
+secret_storage_name = dbutils.secrets.get(scope="bigdata Scope", key="storagename")
 
 # COMMAND ----------
 
