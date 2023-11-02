@@ -1,0 +1,12 @@
+1. Pyton
+2. Py Spark
+3. SQL Spark
+4. Power bi
+5. Azure SQL for storage of precessed data
+6. Azure data lake gen 2 (get data from this )
+7. spark optimisation technic
+8. PPT for presentation
+9. GIT Hub
+10. databricks
+11. Databricks job run
+12. Basic Data Factory pipeline
