@@ -1,6 +1,6 @@
 # end-to-end-supply-chain-project-with-azure-databricks-and-pipeline
 
-**Datasets** : ![Download](https://www.kaggle.com/datasets/aakash15071996/supply-and-chain-datasets/)
+**Datasets** : ![](https://www.kaggle.com/datasets/aakash15071996/supply-and-chain-datasets/)
 
 
 # DataBricks Pipeline
